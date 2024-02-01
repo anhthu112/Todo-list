@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="!showLogin">
         <AddTodo @add-todo="addTodo" />
         <TodoItem
             v-for="todoItem in todo"
@@ -20,7 +20,8 @@ export default {
     name: 'ToDo',
     data() {
         return {
-            todo: []
+            todo: [],
+            showLogin:true
         };
     },
     methods: {
@@ -59,7 +60,7 @@ export default {
     },
     mounted() {
         this.getAlltodo();
-        
+        this.showLogin=false
     },
     components: {
         TodoItem,

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
         <AddTodo @add-todo="addTodo" />
         <TodoItem
             v-for="todoItem in todo"
@@ -59,7 +59,6 @@ export default {
     },
     mounted() {
         this.getAlltodo();
-        
     },
     components: {
         TodoItem,

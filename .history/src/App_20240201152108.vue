@@ -1,22 +1,24 @@
 <template>
   <div class="container">
-    <!-- <Login /> -->
-    <router-view></router-view>
+    <template v-if="loggedIn">
+      <CompTodo/>
+    </template>
+    <template v-else>
+      <Login @login-success="handleLoginSuccess"/>
+    </template>
   </div>
 </template>
 
 <script>
-// import Login from './components/Login.vue'
+import CompTodo from './components/CompTodo.vue';
+import Login from './components/Login.vue'
 
 export default {
   name: 'App',
-  data (){
-    return {
-    }
-  },
 
   components: {
-    // Login,
+    CompTodo,
+    Login,
 },
 }
 </script>

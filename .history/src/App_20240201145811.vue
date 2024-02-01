@@ -1,21 +1,19 @@
 <template>
   <div class="container">
-    <!-- <Login /> -->
-    <router-view></router-view>
+    <CompTodo/>
+    <!-- <Login/> -->
   </div>
 </template>
 
 <script>
+import CompTodo from './components/CompTodo.vue';
 // import Login from './components/Login.vue'
 
 export default {
   name: 'App',
-  data (){
-    return {
-    }
-  },
 
   components: {
+    CompTodo,
     // Login,
 },
 }

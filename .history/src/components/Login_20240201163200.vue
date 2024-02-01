@@ -1,5 +1,5 @@
 <template>
-    <div v-if="showLogin">
+    <div>
       <h2>Login</h2>
       <form @submit.prevent="login">
         <label for="username">Username:</label>
@@ -19,14 +19,12 @@
       return {
         username: '',
         password: '',
-        showLogin: true
       };
     },
     methods: {
       login() {
         console.log('Username:', this.username);
         console.log('Password:', this.password);
-        this.showLogin = false;
       }
     },
     components: {

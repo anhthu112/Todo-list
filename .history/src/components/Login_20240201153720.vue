@@ -1,36 +1,35 @@
 <template>
-    <div v-if="showLogin">
+    <div>
       <h2>Login</h2>
       <form @submit.prevent="login">
         <label for="username">Username:</label>
         <input type="text" id="username" v-model="username" required>
         <label for="password">Password:</label>
         <input type="password" id="password" v-model="password" required>
-        <router-link to="/CompTodo"><button type="submit">Login</button></router-link>
+        <button type="submit" @click="showCompTodo = true">Login</button>
       </form>
     </div>
-    <!-- <CompTodo/> -->
+    <CompTodo v-if="showCompTodo"/>
   </template>
   <script>
-//   import CompTodo from './CompTodo.vue'
+  import CompTodo from './CompTodo.vue'
   export default {
     name: 'login-page',
     data() {
       return {
         username: '',
         password: '',
-        showLogin: true
+        
       };
     },
     methods: {
       login() {
         console.log('Username:', this.username);
         console.log('Password:', this.password);
-        this.showLogin = false;
       }
     },
     components: {
-        // CompTodo
+        CompTodo,
     }
   };
   </script>

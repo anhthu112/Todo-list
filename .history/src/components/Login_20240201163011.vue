@@ -1,5 +1,5 @@
 <template>
-    <div v-if="showLogin">
+    <div>
       <h2>Login</h2>
       <form @submit.prevent="login">
         <label for="username">Username:</label>

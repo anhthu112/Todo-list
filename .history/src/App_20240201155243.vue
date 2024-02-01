@@ -1,22 +1,25 @@
 <template>
   <div class="container">
-    <!-- <Login /> -->
-    <router-view></router-view>
+    <CompTodo/>
+    <Login @login="showCompTodo = true" v-if="!showCompTodo" />
   </div>
 </template>
 
 <script>
-// import Login from './components/Login.vue'
+import CompTodo from './components/CompTodo.vue';
+import Login from './components/Login.vue'
 
 export default {
   name: 'App',
   data (){
     return {
+      showComTodo: false
     }
   },
 
   components: {
-    // Login,
+    CompTodo,
+    Login,
 },
 }
 </script>

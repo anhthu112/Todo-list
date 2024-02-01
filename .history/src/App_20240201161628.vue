@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <!-- <Login /> -->
+    <Login />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-// import Login from './components/Login.vue'
+import Login from './components/Login.vue'
 
 export default {
   name: 'App',
@@ -16,7 +16,7 @@ export default {
   },
 
   components: {
-    // Login,
+    Login,
 },
 }
 </script>
