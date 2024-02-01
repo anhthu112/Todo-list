@@ -1,0 +1,32 @@
+<template>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Products</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <header>
+        <h1>{{ titles }}</h1>
+    </header>
+    <button v-on:click="changeHeader">Thay đổi title từ compheader</button>
+</template>
+<script>
+    export default{
+        name: 'comp-header',
+        props:{
+            titles: String,
+        },
+        data (){
+            return {
+            }
+        },
+        methods:{
+            changeHeader(){
+                console.log('before');
+                this.$emit('changeTitleEvents');
+                console.log('after');
+            }
+        }
+    }
+</script>
