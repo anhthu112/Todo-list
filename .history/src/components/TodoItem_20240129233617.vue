@@ -1,0 +1,21 @@
+<template>
+  <p>
+    <input type="checkbox">
+    {{ todoProps.title }}
+    <button class="btn-delete">Delete</button>
+</p>
+  
+</template>
+
+<script>
+export default {
+    name:'todo-item',
+    props:{
+        todoProps: Array
+    }
+}
+</script>
+
+<style>
+
+</style>

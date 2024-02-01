@@ -1,0 +1,37 @@
+<template>
+    <p :class="['todo-item', todoProps.completed ? 'is-complete' : '']">
+      <input type="checkbox" :checked="todoProps.completed" v-on:change="markItemCompleted"/>
+      {{ todoProps.title }}
+      <button class="btn-delete">Delete</button>
+    </p>
+  </template>
+  
+  <script>
+  export default {
+      name: 'todo-item',
+      data (){
+        return {
+          checkMark: this.todoProps.completed,
+        }
+      },
+      props: ['todoProps'],
+      methods:{
+        markItemCompleted(data){
+          console.log(this.todoProps);
+          this.$emitt('item-complete', data);
+          console.log(data)
+        }
+      }
+
+  }
+  </script>
+  
+  <style>
+  .todo-item {
+  }
+  
+  .is-complete {
+      text-decoration: line-through;
+  }
+  </style>
+  
