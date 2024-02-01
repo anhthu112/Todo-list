@@ -1,16 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <!-- <CompTodo/> -->
+    <Login/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import CompTodo from './components/CompTodo.vue';
+import Login from './components/Login.vue'
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    // CompTodo,
+    Login,
+},
 }
 </script>
 
@@ -23,4 +28,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.container{
+    display: flex;
+    justify-content: center;
+  }
 </style>

@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "id": "ad75470e-9cdd-40a2-8595-608226fce595",
+      "title": "Jeon Wonwwo",
+      "completed": false
+    },
+    {
+      "id": "6f7e1dc8-7226-49bf-b78d-ddfd8728fb5a",
+      "title": "Lee Dokyum",
+      "completed": false
+    }
+  ]
+}
