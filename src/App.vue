@@ -1,20 +1,17 @@
 <template>
   <div class="container">
-    <!-- <CompTodo/> -->
-    <Login/>
+     <CompTodo/> 
   </div>
 </template>
 
 <script>
-// import CompTodo from './components/CompTodo.vue';
-import Login from './components/Login.vue'
+import CompTodo from './components/CompTodo.vue';
 
 export default {
   name: 'App',
 
   components: {
-    // CompTodo,
-    Login,
+    CompTodo,
 },
 }
 </script>
